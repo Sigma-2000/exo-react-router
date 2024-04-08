@@ -4,8 +4,12 @@ import {Link} from "react-router-dom";
 
 const Home = () => {
 
-    const {state} = usePostContext()
-
+    const {state, dispatch} = usePostContext()
+   
+  
+    const handleDelete = (id) => {
+      dispatch({ type: 'POST/DELETE', payload: {id} });
+    };
 
     return (
         <div>
@@ -15,6 +19,7 @@ const Home = () => {
                 state.posts.map(post => (
                   <li key={post.id}>
                     <Link to={`/post/${post.id}`}>{post.title}</Link>
+                    <button onClick={() => handleDelete(post.id)} className="button__Item">X</button>
                   </li>
                 ))
                     :
