@@ -3,9 +3,11 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { useDiceContext } from '../utils/context/diceContext';
 
 
+
 const Homepage = () => {
   const { state, dispatch } = useDiceContext();
   const [repeatCount, setRepeatCount] = useState('100');
+
  
 
   const handleRollDice = () => {
@@ -46,7 +48,7 @@ const Homepage = () => {
       <div>
       <NavLink to="/statistique">Résultats</NavLink> 
       </div>
-      <Outlet />
+      <Outlet/>
     </div>
   );
 };
