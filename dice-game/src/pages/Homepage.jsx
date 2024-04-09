@@ -15,7 +15,7 @@ const Homepage = () => {
       return;
     }
     dispatch({ type: 'RESET' });
-    
+
     for (let i = 0; i < parseInt(repeatCount); i++) {
       console.log('ok')
       dispatch({ type: 'ROLL_DICE' }); 
@@ -30,7 +30,7 @@ const Homepage = () => {
     <div>
       <h1>Jeu de dés</h1>
       <nav>
-      <NavLink to="/description">Description</NavLink> 
+      <NavLink to="/">Description</NavLink> 
       </nav>   
       <div>
         <button onClick={handleRollDice}>Lancer les dés</button>
