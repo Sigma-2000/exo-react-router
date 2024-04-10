@@ -12,6 +12,7 @@ const NavBar = () => {
             <nav>
                 <NavLink style={checkIsActive} to={'/'}>Dragons</NavLink>
                 <NavLink style={checkIsActive} to={'/chevaliers'}>Chevaliers</NavLink>
+                <NavLink style={checkIsActive} to={'/couples'}>Couples</NavLink>
             </nav>
         </header>
     );

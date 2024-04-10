@@ -3,8 +3,11 @@ import {CHEVALIERS_ADD, CHEVALIERS_SET_ERROR, CHEVALIERS_SET_VALUE, CHEVALIERS_D
 const initialState = {
     name: '',
     age: '',
-    chevaliers: [],
-    id: 1,
+    chevaliers: [
+        { id: 1, name: 'Chevalier Banzai', age: '35' },
+        { id: 2, name: 'Chevalier Yamakazi', age: '40' }
+    ],
+    id: 3,
     error: ''
 }
 

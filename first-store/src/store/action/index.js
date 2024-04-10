@@ -1,4 +1,4 @@
-import {DRAGON_ADD, DRAGON_DELETE, DRAGON_SET_ERROR, DRAGON_SET_VALUE, CHEVALIERS_ADD, CHEVALIERS_SET_ERROR, CHEVALIERS_SET_VALUE, CHEVALIERS_DELETE, CHEVALIERS_SET_AGE} from "../constant/action-type.js";
+import {DRAGON_ADD, DRAGON_DELETE, DRAGON_SET_ERROR, DRAGON_SET_VALUE, CHEVALIERS_ADD, CHEVALIERS_SET_ERROR, CHEVALIERS_SET_VALUE, CHEVALIERS_DELETE, CHEVALIERS_SET_AGE, COUPLE_ADD} from "../constant/action-type.js";
 
 export const addDragon = () => ({
     type: DRAGON_ADD
@@ -49,3 +49,8 @@ return {
     payload
 }
 }
+
+export const coupleAdd= (payload) => ({
+  type: COUPLE_ADD,
+  payload
+});

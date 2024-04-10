@@ -6,3 +6,5 @@ export const selectChevalierName = (state) => state.chevaliers.name
 export const selectChevalierAge = (state) => state.chevaliers.age
 export const selectChevalier = (state) => state.chevaliers.chevaliers
 export const selectChevalierError = (state) => state.chevaliers.error
+
+export const selectCouple = (state) => state.couples.couples;
