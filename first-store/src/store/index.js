@@ -17,11 +17,6 @@ const coupleMiddleware = store => next => action => {
       return
     }
   }
-  if (action.type !== 'COUPLE_ADD') {
-      store.dispatch({
-          type: 'COUPLE_ADD'
-      })
-  }
  
   next(action)
 }
