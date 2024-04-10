@@ -9,8 +9,14 @@ const coupleMiddleware = store => next => action => {
   if (action.type === 'COUPLE_ADD') {
     const currentState = store.getState(); 
     console.log(currentState)
+    const { couples } = currentState.couples;
+    const dragonAlreadyPaired = couples.some(couple => couple.dragon.id === action.payload.dragon.id);
+    const chevalierAlreadyPaired = couples.some(couple => couple.chevalier.id === action.payload.chevalier.id);
+  
+    if (dragonAlreadyPaired || chevalierAlreadyPaired) {
+      return
+    }
   }
-
   if (action.type !== 'COUPLE_ADD') {
       store.dispatch({
           type: 'COUPLE_ADD'

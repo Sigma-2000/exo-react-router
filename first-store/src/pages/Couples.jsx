@@ -13,12 +13,13 @@ function Couples() {
   
   const handleCreateCouple = () => {
     if (selectedDragon && selectedChevalier) {
-    const dragonObject = dragons.find(dragon => dragon.id === selectedDragon);
-    const chevalierObject = chevaliers.find(chevalier => chevalier.id === selectedChevalier);
-
-      dispatch(coupleAdd({ dragonId: dragonObject , chevalierId: chevalierObject }));
-      console.log(couples)
+    const dragonObject = dragons.find(dragon => dragon.id === parseInt(selectedDragon));
+    const chevalierObject = chevaliers.find(chevalier => chevalier.id === parseInt(selectedChevalier));
+      console.log(dragonObject)
+      console.log(dragons)
       console.log(selectedDragon)
+    dispatch(coupleAdd({ dragon: dragonObject , chevalier: chevalierObject }));
+      console.log(couples)
     }
   };
 
@@ -45,7 +46,13 @@ function Couples() {
       </div>
       <button onClick={handleCreateCouple}>Créer le couple</button>
       <div>
-    
+      <h2>Couples Créés</h2>
+      {couples.length > 0 ? (
+        couples.map((couple, index) => (
+      <div key={index}>
+        <p>Dragon: {couple.dragon.name} - Chevalier: {couple.chevalier.name}</p>
+      </div>
+      ))) : (<p>Aucun couple dans la liste</p>)}
       </div>
     </div>
     
